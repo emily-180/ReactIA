@@ -1,106 +1,149 @@
+
+body {
+    margin: 0;
+    background-color: #edf7e0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 .main {
-    flex: 1;
-    min-height: 100vh;
-
-    padding-bottom: 15vh;
-    position: relative;
-}
-
-.main .nav {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.nav {
+    display: flex;
     justify-content: space-between;
-    font-size: 22px;
-    padding: 20px;
-    color: #585858;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 16px 24px;
+    border-bottom: 2px solid #477e00;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.main .nav:hover {
-    background-color: #f6f7f8;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.main .nav img {
-    width: 40px;
+.nav img {
+    width: 36px;
     border-radius: 50%;
+    border: 1px solid #ccc;
 }
 
 .main-container {
-    max-width: 900px;
+    max-width: 900px;  /* limite máximo para não esticar demais */
+    width: 90vw;       /* ocupa até 90% da largura da viewport */
     margin: auto;
-}
-
-.main .greet {
-    /* margin: 50px 0px; */
-    margin: 0px 30px;
-    font-size: 48px;
-    color: #c4c7c5;
-    font-weight: 500;
-    /* padding: 20px; */
-    margin-bottom: 30px;
-}
-
-.main .greet span {
-    background: -webkit-linear-gradient(16deg, #179b5e, #dce8c6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.main .cards {
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
     padding: 20px;
+    flex: 1;
 }
 
-.main .card {
-    height: 200px;
-    padding: 15px;
-    background-color: #f0f4f9;
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
+.greet {
+    margin-bottom: 20px;
 }
 
-.main .card img {
-    width: 35px;
-    padding: 5px;
-    position: absolute;
-    background-color: white;
+.greet span {
+    color: #c41313;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.greet h1 {
+    font-weight: bold;
+    font-size: 40px;
+}
+.greet h3 {
+    color:#333;
+}
+.suggestions {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.suggestions h2 {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.suggestion-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.suggestion-buttons button {
+    background-color: #ffffff;
+    border: 1px solid #199421;
+    color: #199421;
+    padding: 8px 12px;
     border-radius: 20px;
-    bottom: 10px;
-    right: 10px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-.main .card p {
-    color: #585858;
-    font-size: 17px;
+.suggestion-buttons button:hover {
+    background-color: #2e7d32;
+    color: #fff;
 }
 
-.main .card:hover {
-    background-color: #dfe4ea;
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.chat-bubble {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.user-msg {
+    background-color: #dbdbdbe0;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+    color: #020202;
+}
+
+.bot-msg {
+    background-color: #ffffff;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+    color: #199421;
 }
 
 .main-bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    max-width: 900px;
-    padding: 0px 20px;
-    margin: auto;
+    margin-top: auto;
+    padding: 20px 0;
 }
 
 .search-box {
     display: flex;
     align-items: center;
-
     justify-content: space-between;
-    gap: 20px;
-    background-color: #f0f4f9;
+    gap: 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
     padding: 10px 20px;
-    border-radius: 50px;
+    border-radius: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
 }
 
 .search-box img {
@@ -108,111 +151,24 @@
     cursor: pointer;
 }
 
-.search-box input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
-    padding: 8px;
-    font-size: 18px;
-}
-
-.search-box div {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.main .bottom-info {
-    font-size: 13px;
-    margin: 15px auto;
+.bottom-info {
+    font-size: 12px;
+    color: #555;
+    margin-top: 12px;
     text-align: center;
-    font-weight: 300;
+    line-height: 1.4;
 }
 
-.result {
-    padding: 0px 5%;
-    max-height: 70vh;
-    overflow-y: scroll;
-}
-
-.result::-webkit-scrollbar {
-    display: none;
-}
-
-.result-title {
-    margin: 40px 0px;
-    display: flex;
-    align-items: center;
-
-    gap: 20px;
-}
-
-.result img {
-    width: 40px;
-    border-radius: 50%;
-}
-
-.result-data {
-    display: flex;
-    align-items: start;
-    gap: 20px;
-}
-
-.loader {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.loader hr {
-    border-radius: 4px;
-    border: none;
-    background-color: #f6f7f8;
-    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
-    background-size: 800px 50px;
-    height: 20px;
-    animation: loader 3s infinite linear;
-}
-
-@keyframes loader {
-    0% {
-        background-position: -800px 0px;
+@media (min-width: 901px) {
+    .greet span {
+        font-size: 48px; /* maior em telas grandes */
     }
-
-    100% {
-        background-position: 800px 0px;
+    .main-container {
+        padding: 40px;
+    }
+    .chat-bubble {
+        font-size: 18px;
+        max-width: 60vw; /* usar mais espaço */
     }
 }
 
-.result-data p {
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.8;
-}
-
-@media (max-width:600px) {
-    .main-bottom input {
-        flex: none;
-        width: 150px;
-    }
-
-    .main-bottom img {
-        width: 20px;
-    }
-
-    .search-box {
-        padding: 5px 10px;
-    }
-
-    .search-box div {
-        gap: 5px;
-    }
-
-    .greet {
-        margin: 50px 0px;
-        padding-left: 22px;
-    }
-
-}

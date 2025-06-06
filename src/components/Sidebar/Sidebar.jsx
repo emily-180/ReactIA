@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import "./Sidebar.css";
 import { assets } from "../../assets/assets";
+import client1 from "../../assets/client1.png";
+
 const SideBar = () => {
     return (
         <div className="sidebar">
             <div className="top">
-                <img className="menu" src={assets.menu_icon} alt="" />
+                <img src={client1} alt="bot" className="bot-icon" />
+
             </div>
             <div>
                 <div className="bottom">
