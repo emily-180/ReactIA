@@ -5,7 +5,6 @@ import getApiData from "../../config/apigemini";
 
 const suggestions = [
     "Quem é você?",
-    "Quem pode participar das avaliações?",
     "Quais são os resultados mais recentes?",
     "Qual a importância da avaliação?",
     "Contato de email",
