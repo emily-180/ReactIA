@@ -4,12 +4,13 @@ import { assets } from "../../assets/assets";
 import getApiData from "../../config/apigemini";
 
 const suggestions = [
-    "O que é a CPA?",
-    "Quem pode participar das avaliações?",
+    "Quem é você?",
     "Quais são os resultados mais recentes?",
     "Qual a importância da avaliação?",
-    "Contato",
-    "Equipe"
+    "Contato de email",
+    "Base Legal",
+    "Instagram",
+    "Quando geralmente ocorre as avaliações?"
 ];
 
 const Painel = () => {
