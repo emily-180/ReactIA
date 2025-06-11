@@ -1,11 +1,16 @@
 .sidebar {
-    display: inline-flex;
+    position: fixed;         /* Fixa na tela */
+    top: 0;
+    left: 0;
+    width: 220px;            /* Largura fixa */
+    height: 100vh;           /* Altura total da tela */
+    background-color: #f9f9f9;
+    border-right: 1px solid #477e00;
+    padding: 25px 15px;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px 15px;
-    min-height: 100vh;
-    background-color: #f9f9f9; /* cor neutra */
-    border-right: 1px solid #477e00;
+    z-index: 1000;
 }
 
 .sidebar img:not(.bot-icon) {
