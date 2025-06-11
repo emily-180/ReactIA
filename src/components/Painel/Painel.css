@@ -172,3 +172,59 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .greet h1 {
+    font-size: 24px;
+  }
+
+  .greet span {
+    font-size: 26px;
+  }
+
+  .suggestion-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .chat-bubble {
+    font-size: 14px;
+    max-width: 90%;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+
+  .bottom-info {
+    font-size: 10px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+}

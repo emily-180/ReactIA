@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+
+.app-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .app-wrapper {
+    flex-direction: column;
+  }
+}
